@@ -61,7 +61,9 @@ Events:
 Go ahead and edit the existing Pod. Alternatively, you could also just use the `kubectl set image pod mypod mypod=nginx --namespace=ckad-prep` command.
 
 ```bash
-$ kubectl edit pod mypod --namespace=ckad-prep
+$ kubectl edit pod mypod --namespace=ckad-prep 
+ 
+   Vào edit thông tin của pod 
 ```
 
 After setting an image that does exist, the Pod should render the status `Running`.
