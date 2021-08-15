@@ -16,20 +16,20 @@
 <details><summary>Show Solution</summary>
 <p>
 
-First, create the namespace.
+First, create the namespace. Tạo 1 namespace
 
 ```bash
 $ kubectl create namespace ckad-prep
 ```
 
-Next, create the Pod in the new namespace.
+Next, create the Pod in the new namespace. Tạo 1 pod trong namespace
 
 ```bash
 $ kubectl run mypod --image=nginx:2.3.5 --restart=Never --port=80 --namespace=ckad-prep
 pod/mypod created
 ```
 
-You will see that the image cannot be pulled as it doesn't exist with this tag.
+You will see that the image cannot be pulled as it doesn't exist with this tag. Bạn sẽ thấy image không được pull vì tag của image đó không tồn tại.
 
 ```bash
 $ kubectl get pod -n ckad-prep
