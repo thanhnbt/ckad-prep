@@ -104,6 +104,10 @@ Remember to use the `--rm` to create a temporary Pod.
 ```bash
 $ kubectl run busybox --image=busybox --rm -it --restart=Never -n ckad-prep -- /bin/sh
 If you don't see a command prompt, try pressing enter.
+   
+   ( Mở thêm 1 terminal để kiểm tra IP của 2 pod 
+   $ kubectl get pods -o wide -n ckad-prep 
+   Sau đó mới gõ lệnh wget ip_của_pod_mypod:80)
 / # wget -O- 192.168.60.149:80
 Connecting to 192.168.60.149:80 (192.168.60.149:80)
 <!DOCTYPE html>
