@@ -11,9 +11,15 @@ Xác định lỗi khi tạo container --> write nguyên nhân lỗi ra 1 file '
 4. Change the image of the Pod to `nginx:1.15.12`.
 Thay đổi image của Pod --> nginx:1.15.12
 5. List the Pod and ensure that the container is running.
+Liệt kê các pod và chắc chắn rằng container is running
 6. Log into the container and run the `ls` command. Write down the output. Log out of the container.
+ĐI vào trong container và chạy lệnh ls. 
 7. Retrieve the IP address of the Pod `mypod`.
+Kiểm tra IP của pod 'mypod'
 8. Run a temporary Pod using the image `busybox`, shell into it and run a `wget` command against the `nginx` Pod using port 80.
+Chạy 1 pod tạm thời sử dụng image 'busybox', gõ lệnh để vào trong container và thực hiện run 'wget' kiểm tra 'nginx' Pod cổng 80
+
+
 9. Render the logs of Pod `mypod`.
 10. Delete the Pod and the namespace.
 
@@ -78,6 +84,7 @@ mypod   1/1     Running   0          14m
 You can shell into the container and run the `ls` command.
 
 ```bash
+Shell để vào trong container
 $ kubectl exec mypod -it --namespace=ckad-prep  -- /bin/sh
 / # ls
 bin  boot  dev	etc  home  lib	lib64  media  mnt  opt	proc  root  run  sbin  srv  sys  tmp  usr  var
@@ -85,7 +92,7 @@ bin  boot  dev	etc  home  lib	lib64  media  mnt  opt	proc  root  run  sbin  srv 
 ```
 
 Retrieve the IP address of the Pod with the `-o wide` command line option.
-
+Kiểm tra IP của pod thì thêm -o wide
 ```bash
 $ kubectl get pods -o wide -n ckad-prep
 NAME    READY   STATUS    RESTARTS   AGE   IP               NODE
