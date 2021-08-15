@@ -19,9 +19,10 @@ Kiểm tra IP của pod 'mypod'
 8. Run a temporary Pod using the image `busybox`, shell into it and run a `wget` command against the `nginx` Pod using port 80.
 Chạy 1 pod tạm thời sử dụng image 'busybox', gõ lệnh để vào trong container và thực hiện run 'wget' kiểm tra 'nginx' Pod cổng 80
 
-
 9. Render the logs of Pod `mypod`.
+Hiển thị log của pod 'mypod'
 10. Delete the Pod and the namespace.
+Xóa pod và namespace
 
 <details><summary>Show Solution</summary>
 <p>
