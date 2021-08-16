@@ -1,6 +1,6 @@
 # Configuration (18%)
 
-## Configuring a Pod to Use a ConfigMap
+## Configuring a Pod to Use a ConfigMap Cấu hình config sử dụng configmap
 
 1. Create a new file named `config.txt` with the following environment variables as key/value pairs on each line.
 
