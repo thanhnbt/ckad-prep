@@ -3,13 +3,19 @@
 ## Configuring a Pod to Use a ConfigMap Cấu hình config sử dụng configmap
 
 1. Create a new file named `config.txt` with the following environment variables as key/value pairs on each line.
-
+Tạo 1 file name 'config.txt' với các tham số môi trường cặp  key/value
 - `DB_URL` equates to `localhost:3306`
 - `DB_USERNAME` equates to `postgres`
 
 2. Create a new ConfigMap named `db-config` from that file.
+
+Tạo configmap tên là db-config từ file đó
+
 3. Create a Pod named `backend` that uses the environment variables from the ConfigMap and runs the container with the image `nginx`.
+Tạo 1 pod tên là 'backend' --> sử dụng tham số môi trường từ ConfigMap và chạy container tên là nginx
+
 4. Shell into the Pod and print out the created environment variables. You should find `DB_URL` and `DB_USERNAME` with their appropriate values.
+Shell vào bên trong pod và in ra thông tin các tham số môi trường đã được tạo  
 
 <details><summary>Show Solution</summary>
 <p>
